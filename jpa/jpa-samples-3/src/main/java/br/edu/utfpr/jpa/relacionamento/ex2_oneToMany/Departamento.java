@@ -7,8 +7,6 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -20,11 +18,7 @@ public class Departamento {
 
     private String nome;
 
-    @OneToMany(cascade = CascadeType.PERSIST)
-    @JoinTable(
-            name = "dep_func",
-            joinColumns = @JoinColumn(name = "dep_id"),
-            inverseJoinColumns = @JoinColumn(name = "func_id"))
+    @OneToMany(cascade = CascadeType.PERSIST, targetEntity = Funcionario.class)
     private Collection<Funcionario> funcionarios = new ArrayList<>();
 
     public Departamento() {
