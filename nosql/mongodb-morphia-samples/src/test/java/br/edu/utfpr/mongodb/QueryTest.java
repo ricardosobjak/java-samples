@@ -1,5 +1,6 @@
 package br.edu.utfpr.mongodb;
 
+import br.edu.utfpr.mongodb.model.Anotacao;
 import br.edu.utfpr.mongodb.model.Pessoa;
 import com.mongodb.MongoClient;
 import org.junit.AfterClass;
@@ -28,16 +29,23 @@ public class QueryTest {
     }
 
     @Test
-    public void findAll() {
-        System.out.println("Test findAll: ");
+    public void findPessoas() {
+        System.out.println("Test findPessoas: ");
         Query<Pessoa> query = datastore.find(Pessoa.class);
         System.out.println(query.asList());
     }
 
     @Test
-    public void byQuery() {
-        System.out.println("Test byQuery: ");
+    public void pessoasByQuery() {
+        System.out.println("Test pessoasByQuery: ");
         Query<Pessoa> query = datastore.createQuery(Pessoa.class).field("nome").contains("Marcelo");
+        System.out.println(query.asList());
+    }
+    
+    @Test
+    public void findAnnotations() {
+        System.out.println("Test findAnnotations: ");
+        Query<Anotacao> query = datastore.find(Anotacao.class);
         System.out.println(query.asList());
     }
 }

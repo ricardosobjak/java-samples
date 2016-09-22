@@ -15,6 +15,15 @@ public class Anotacao {
     
     private String anotacao;
 
+    public Anotacao() {
+    }
+
+    public Anotacao(Pessoa pessoa, String anotacao) {
+        this.pessoa = pessoa;
+        this.anotacao = anotacao;
+    }
+        
+
     public ObjectId getId() {
         return id;
     }
