@@ -5,6 +5,7 @@ import br.edu.utfpr.mongodb.model.Endereco;
 import br.edu.utfpr.mongodb.model.Pessoa;
 import com.mongodb.MongoClient;
 import java.util.Arrays;
+import java.util.Calendar;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -35,7 +36,7 @@ public class InsertTest {
         pessoa1.setNome("Juarez Silva");
         pessoa1.setEndereco(new Endereco("Rua Para", "Centro", "85884-000", "Medianeira", "PR"));
         pessoa1.setHobbies(Arrays.asList(new String[]{"Nadar", "Correr"}));
-        //pessoa.setDataNascimento(Calendar.getInstance());
+        pessoa1.setDataNascimento(Calendar.getInstance());
         
         Pessoa pessoa2 = new Pessoa();
         pessoa2.setNome("Marcelo Silva");
@@ -51,5 +52,4 @@ public class InsertTest {
         datastore.save(new Anotacao(pessoa2, "Anotação 3"));
         datastore.save(new Anotacao(pessoa2, "Anotação 4"));
     }
-
 }
