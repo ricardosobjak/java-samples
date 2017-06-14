@@ -14,6 +14,7 @@ public class Ex03_JDialog {
         public MeuDialog(JFrame parent, String title, String message) {
             super(parent, title);
             System.out.println("creating the window..");
+            this.setModal(true);
             
             this.setLocation(400, 400);
 

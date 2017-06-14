@@ -23,6 +23,8 @@ public class JComboBox_01 {
         
         String[] petStrings = { "Bird", "Cat", "Dog", "Rabbit", "Pig" };
         JComboBox petList = new JComboBox(petStrings);
+        petList.addItem("Other");
+        
         
         petList.setSelectedIndex(2); //Selecionando um item padrão
 
