@@ -43,6 +43,10 @@ public class AppLivraria extends JFrame {
             FormLivroGUI gui = new FormLivroGUI(AppLivraria.this);
         });
         
+        btListLivro.addActionListener(e -> {
+            ListLivroGUI gui = new ListLivroGUI(AppLivraria.this);
+        });
+        
         panel.add(btCadLivro);
         panel.add(btListLivro);
         
