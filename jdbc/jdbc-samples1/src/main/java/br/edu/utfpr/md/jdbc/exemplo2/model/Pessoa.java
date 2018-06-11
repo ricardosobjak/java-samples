@@ -101,50 +101,8 @@ public class Pessoa implements Serializable {
         this.ativo = ativo;
     }
 
-    public Pessoa() {
-    }
-
-    public Pessoa(Long userId, String login, String nome) {
-        this();
-        this.id = userId;
-        this.login = login;
-        this.nome = nome;
-    }
-
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("ID=" + id);
-        sb.append(", ");
-        sb.append("Nome=" + nome);
-        sb.append(", ");
-        sb.append("Login=" + login);
-        sb.append(", ");
-        sb.append("Senha MD5=" + md5Password);
-        sb.append(", ");
-        sb.append("Ativo=" + ativo);
-        sb.append(", ");
-        sb.append("E-mail=" + email);
-        sb.append(", ");
-        sb.append("Telefone=" + telefone);
-        sb.append(", ");
-        sb.append("Papel=" + papel);
-
-        return sb.toString();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null || getClass() != obj.getClass()) {
-            return false;
-        }
-        if (this.id == null) {
-            return false;
-        }
-        Pessoa u = (Pessoa) obj;
-        return this.id.equals(u.id);
+        return "Pessoa{" + "id=" + id + ", login=" + login + ", md5Password=" + md5Password + ", nome=" + nome + ", papel=" + papel + ", email=" + email + ", telefone=" + telefone + ", ativo=" + ativo + '}';
     }
 }

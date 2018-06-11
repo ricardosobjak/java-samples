@@ -32,7 +32,7 @@ public class BancoFactory {
             conn.setAutoCommit(false);
             Statement s = conn.createStatement();
 
-            s.execute("DROP TABLE tb_pessoa");
+            s.execute("DROP TABLE if exists tb_pessoa");
 
             conn.commit();
         } catch (SQLException e) {

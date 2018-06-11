@@ -1,5 +1,6 @@
 package br.edu.utfpr.jpa.relacionamento.ex4_manyToMany;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -9,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
 @Entity
-public class Autor {
+public class Autor implements Serializable {
 
     @Id
     @GeneratedValue

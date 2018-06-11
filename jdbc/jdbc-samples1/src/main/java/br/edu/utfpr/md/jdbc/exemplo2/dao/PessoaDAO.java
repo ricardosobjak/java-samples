@@ -36,7 +36,7 @@ public class PessoaDAO extends AbstractDAO<Pessoa> {
             static final String ATIVO = "ativo";
         }
 
-        static final String SQL_CREATE = "CREATE TABLE " + NOME + " ("
+        static final String SQL_CREATE = "CREATE TABLE if not exists " + NOME + " ("
                 //+ COLUMN.ID + " INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1), "
                 + COLUMN.ID + " INTEGER NOT NULL AUTO_INCREMENT, "
                 + COLUMN.NOME + " VARCHAR(50) NOT NULL, "

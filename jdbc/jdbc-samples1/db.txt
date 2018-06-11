@@ -1,0 +1,14 @@
+DROP TABLE IF EXISTS `tb_pessoa`;
+
+
+CREATE TABLE `tb_pessoa` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(50) NOT NULL,
+  `login` varchar(20) DEFAULT NULL,
+  `senha` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `papel` int(11) NOT NULL,
+  `telefone` varchar(20) DEFAULT NULL,
+  `ativo` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
