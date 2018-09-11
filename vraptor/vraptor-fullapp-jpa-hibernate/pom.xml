@@ -13,7 +13,7 @@
         <weld.version>3.0.4.Final</weld.version>
         <vraptor.version>4.3.0-beta-3</vraptor.version>
         <postgresql.version>42.2.5</postgresql.version>
-        <hibernate.version>5.3.3.Final</hibernate.version>
+        <hibernate.version>5.3.6.Final</hibernate.version>
     </properties>
     
     <dependencies>
